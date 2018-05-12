@@ -1,0 +1,100 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<!--
+The author is wuyepeng
+Email is 1870096555@qq.com
+-->
+<html>
+	<head>
+		<title>吴业鹏的博客</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css'%}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css'%}" /></noscript>
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>谁来<br />
+						   剪月光</h1>
+						<p>我欲乘风破浪，踏遍黄沙海洋</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="{% url 'index'%}" class="logo">我的博客</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="{% url 'index'%}">博客首页</a></li>
+							<li><a href="{% url 'generic'%}">Generic Page</a></li>
+							<li><a href="{% url 'elements'%}">Elements Reference</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" align="center">
+                        <div class="content-body">
+                            <div class="row">
+						<!-- Featured Post -->
+                          {% block main %}
+                          {% endblock main %}
+
+						<!-- Footer -->
+                            </div>
+                        </div>
+                            <footer>
+								<div class="pagination">
+									<!--<a href="#" class="previous">Prev</a>-->
+									<a href="#" class="page active">1</a>
+                                    <a href="#" class="page active">2</a>
+									<span class="extra">&hellip;</span>
+
+									<a href="#" class="next">Next</a>
+								</div>
+							</footer>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="text" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="3"></textarea>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+					</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js'%}"></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js'%}"></script>
+			<script src="{% static 'assets/js/jquery.scrolly.min.js'%}"></script>
+			<script src="{% static 'assets/js/skel.min.js'%}"></script>
+			<script src="{% static 'assets/js/util.js'%}"></script>
+			<script src="{% static 'assets/js/main.js'%}"></script>
+
+	</body>
+</html>
